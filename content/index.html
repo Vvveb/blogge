@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Blogge | Personal Blog Site</title>
+
+  <!--Meta For No Index-->
+  <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- Theme Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
+</head>
+
+<body>
+
+  <!-- Navbar Start -->
+  <nav class="main-nav navbar navbar-expand-lg">
+    <div class="container">
+      <!-- Logo -->
+      <div data-v-component-site>
+        <a class="navbar-brand" href="/" data-v-url-params='{"host":"www.*.*"}'>
+          <img src="img/logo.png" loading="lazy" class="logo-default logo-main" src="images/logo.svg" alt="logo" data-v-site-logo>
+          <!--
+		   <img src="img/logo.png" loading="lazy" class="logo-sticky logo-main" src="images/logo.svg" alt="logo" data-v-site-logo-sticky>
+		   <img src="img/logo-white.png" loading="lazy" class="logo-default-dark logo-main" src="images/logo.svg" alt="logo" data-v-site-logo-dark>
+		   <img src="img/logo-white.png" loading="lazy" class="logo-default-dark-sticky logo-main" src="images/logo.svg" alt="logo" data-v-site-logo-dark-sticky>
+		   -->
+        </a>
+      </div>
+
+      <!-- Toogle Button -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-list" id="mainNav" data-v-component-menu="header" data-v-slug="main-menu">
+        <!-- Navigation Links -->
+        <ul class="navbar-nav ms-auto" data-v-menu-items>
+          <li class="nav-item dropdown" data-v-menu-item data-v-class-if-has-dropdown="category.children > 0">
+
+            <a class="nav-link" href="#" data-v-class-if-dropdown-toggle="category.children > 0" aria-haspopup="true" aria-expanded="false" data-v-menu-item-url>
+              <span data-v-menu-item-name>Resources</span>
+            </a>
+
+            <div class="dropdown-menu" data-v-menu-item-recursive>
+              <div data-v-menu-item class="nav-item" data-v-menu-item data-v-class-if-dropdown="category.children > 0">
+                <a class="dropdown-item" href="https://github.com/givanz/VvvebJs/wiki" data-v-menu-item-url>
+                  <span data-v-menu-item-name>User Documentation</span>
+                </a>
+              </div>
+              <div data-v-menu-item class="nav-item" data-v-menu-item data-v-class-if-dropdown="category.children > 0">
+                <a class="dropdown-item" href="https://github.com/givanz/VvvebJs/wiki" data-v-menu-item-url>
+                  <span data-v-menu-item-name>Developer Documentation</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item" data-v-menu-item>
+            <a class="nav-link" href="https://blog.vvveb.com" data-v-menu-item-url>
+              <span data-v-menu-item-name>Blog</span>
+            </a>
+          </li>
+          <li class="nav-item" data-v-menu-item>
+            <a class="nav-link" href="https://www.vvveb.com/page/contact" data-v-menu-item-url>
+              <span data-v-menu-item-name>Contact</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-v-menu-item>
+            <a class="nav-link" href="index.html" data-v-menu-item-url>
+              <span data-v-menu-item-name>Home</span>
+            </a>
+          </li>
+          <li class="nav-item" data-v-menu-item>
+            <a class="nav-link" href="about.html" data-v-menu-item-url>
+              <span data-v-menu-item-name>About</span>
+            </a>
+          </li>
+          <li class="nav-item" data-v-menu-item>
+            <a class="nav-link" href="contact.html" data-v-menu-item-url>
+              <span data-v-menu-item-name>Contact</span>
+            </a>
+          </li>
+
+        </ul>
+        <!-- Social Link -->
+        <ul class="main-nav-social">
+          <li>
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+
+  <section class="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8" data-v-component-posts="popular" data-v-limit="7" data-v-image_size="large" data-v-tags="5" data-v-categories="3">
+          <div class="blog-section-title">
+            <h2>Articles</h2>
+            <p>View the latest news on Blogger</p>
+          </div>
+          <article class="blog-post @@class" data-v-post data-v-if="posts.count > 0">
+            <div class="blog-post-thumb">
+              <img src="images/blog/blog-thum-1.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag" data-v-categories>
+
+                <div data-v-if="categories > 0" <ul class="list-inline">
+                  <li class="list-inline-item" data-v-categories-cat>
+                    <a href="category.html" data-v-categories-cat-url>
+                      <span data-v-categories-cat-name>Travel</span>
+                    </a>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="blog-post-title">
+                <a href="single-blog.html" data-v-post-url>
+                  <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                </a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>
+                    By <a href="content/post.html" data-v-post-author-url>
+                      <span data-v-post-display_name>admin</span>
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    October 19, 2020 - 2 min
+                  </li>
+                </ul>
+              </div>
+              <p data-v-post-excerpt>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy.
+              </p>
+              <a href="single-blog.html" data-v-post-url class="blog-post-action">
+                <span>read more</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article class="blog-post" data-v-post>
+            <div class="blog-post-thumb">
+              <a href="single-blog.html">
+                <img src="images/blog/blog-thum-2.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+              </a>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag">
+                <a href="category.html">Travel</a>
+              </div>
+              <div class="blog-post-title">
+                <a href="single-blog.html" data-v-post-url>
+                  <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                </a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>By <a href="content/post.html" data-v-post-author-url>
+                      <span data-v-post-display_name>Mary Astor</span>
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    October 19, 2020 - 2 min
+                  </li>
+                </ul>
+              </div>
+
+              <p data-v-post-excerpt>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy.
+              </p>
+              <a href="single-blog.html" data-v-post-url class="blog-post-action">
+                <span>read more</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article class="blog-post" data-v-post>
+            <div class="blog-post-thumb">
+              <a href="single-blog.html">
+                <img src="images/blog/blog-thum-3.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+              </a>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag">
+                <a href="category.html">Travel</a>
+              </div>
+              <div class="blog-post-title">
+                <a href="single-blog.html" data-v-post-url>
+                  <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                </a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>By <a href="content/post.html" data-v-post-author-url>
+                      <span data-v-post-display_name>Mary Astor</span>
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    October 19, 2020 - 2 min
+                  </li>
+                </ul>
+              </div>
+
+              <p data-v-post-excerpt>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy.
+              </p>
+              <a href="single-blog.html" data-v-post-url class="blog-post-action">
+                <span>read more</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article class="blog-post" data-v-post>
+            <div class="blog-post-thumb">
+              <a href="single-blog.html">
+                <img src="images/blog/blog-thum-4.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+              </a>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag">
+                <a href="category.html">Travel</a>
+              </div>
+              <div class="blog-post-title">
+                <a href="single-blog.html" data-v-post-url>
+                  <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                </a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>By <a href="content/post.html" data-v-post-author-url>
+                      <span data-v-post-display_name>Mary Astor</span>
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    October 19, 2020 - 2 min
+                  </li>
+                </ul>
+              </div>
+
+              <p data-v-post-excerpt>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy.
+              </p>
+              <a href="single-blog.html" data-v-post-url class="blog-post-action">
+                <span>read more</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article class="blog-post" data-v-post>
+            <div class="blog-post-thumb">
+              <a href="single-blog.html">
+                <img src="images/blog/blog-thum-5.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+              </a>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag">
+                <a href="category.html">Travel</a>
+              </div>
+              <div class="blog-post-title">
+                <a href="single-blog.html" data-v-post-url>
+                  <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                </a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>By <a href="content/post.html" data-v-post-author-url>
+                      <span data-v-post-display_name>Mary Astor</span>
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    October 19, 2020 - 2 min
+                  </li>
+                </ul>
+              </div>
+
+              <p data-v-post-excerpt>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy.
+              </p>
+              <a href="single-blog.html" data-v-post-url class="blog-post-action">
+                <span>read more</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article class="blog-post" data-v-post>
+            <div class="blog-post-thumb">
+              <a href="single-blog.html">
+                <img src="images/blog/blog-thum-6.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+              </a>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag">
+                <a href="category.html">Travel</a>
+              </div>
+              <div class="blog-post-title">
+                <a href="single-blog.html" data-v-post-url>
+                  <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                </a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>By <a href="content/post.html" data-v-post-author-url>
+                      <span data-v-post-display_name>Mary Astor</span>
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    October 19, 2020 - 2 min
+                  </li>
+                </ul>
+              </div>
+
+              <p data-v-post-excerpt>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy.
+              </p>
+              <a href="single-blog.html" data-v-post-url class="blog-post-action">
+                <span>read more</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <article class="blog-post" data-v-post>
+            <div class="blog-post-thumb">
+              <a href="single-blog.html">
+                <img src="images/blog/blog-thum-7.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+              </a>
+            </div>
+            <div class="blog-post-content">
+              <div class="blog-post-tag">
+                <a href="category.html">Travel</a>
+              </div>
+              <div class="blog-post-title">
+                <a href="single-blog.html" data-v-post-url>
+                  <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                </a>
+              </div>
+              <div class="blog-post-meta">
+                <ul>
+                  <li>By <a href="content/post.html" data-v-post-author-url>
+                      <span data-v-post-display_name>Mary Astor</span>
+                    </a>
+                  </li>
+                  <li>
+                    <i class="fa fa-clock-o"></i>
+                    October 19, 2020 - 2 min
+                  </li>
+                </ul>
+              </div>
+              <p data-v-post-excerpt>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                nonumy.
+              </p>
+              <a href="single-blog.html" data-v-post-url class="blog-post-action">
+                <span>read more</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+          </article>
+          <div class="blog-post-pagination">
+
+            <div data-pagination data-v-parent-component="posts" data-v-parent-index="0">
+
+              <nav data-v-if="pagecount > 1" class="nav-bg">
+                <ul class="pagination pagination-sm">
+
+                  <!--
+						<li class="page-item pager-first" data-first>
+							<a class="page-link" title="First page" href="#" data-page-url data-v-if="current_page > 1">
+								<span aria-hidden="true" class="fa fa-angle-double-left"></span>
+								<span class="sr-only">First</span>
+							</a>
+						</li>
+						-->
+
+                  <li class="page-item pager-prev" data-prev>
+
+                    <a class="page-link" href="#" aria-label="Previous" title="Previous page" data-page-url data-v-if="current_page > 1">
+                      <span aria-hidden="true" class="fa fa-angle-left la-lg"></span>
+                      <!-- <span>Newer Posts</span> -->
+                    </a>
+
+                  </li>
+
+
+
+                  <li class="page-item" data-page>
+                    <a class="page-link" href="#" data-page-no data-page-url>1</a>
+                  </li>
+                  <li class="page-item" data-page>
+                    <a class="page-link" href="#" data-page-no data-page-url>2</a>
+                  </li>
+                  <li class="page-item" data-page>
+                    <a class="page-link" href="#" data-page-no data-page-url>3</a>
+                  </li>
+                  <li class="page-item" data-page>
+                    <a class="page-link" href="#" data-page-no data-page-url>4</a>
+                  </li>
+                  <li class="page-item" data-page>
+                    <a class="page-link" href="#" data-page-no data-page-url>5</a>
+                  </li>
+
+                  <li class="page-item pager-next" data-next>
+                    <a class="page-link" href="#" aria-label="Next" title="Next page" data-page-url data-v-if="current_page < pagecount">
+                      <!-- <span>Older Posts</span> -->
+                      <span aria-hidden="true" class="fa fa-angle-right la-lg"></span>
+                    </a>
+                  </li>
+
+                  <!--
+						<li class="page-item pager-last" data-last>
+							<a class="page-link" title="Last page" href="#" data-page-url data-v-if="current_page < pagecount">
+							<span aria-hidden="true" class="fa fa-angle-double-right"></span>
+								<span class="sr-only">Last</span>
+							</a>
+						</li>
+						-->
+
+                </ul>
+              </nav>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="blog-post-widget" data-v-component-posts="popular" data-v-limit="7" data-v-image_size="large">>
+            <div class="latest-widget-title">
+              <h2>Trending post</h2>
+            </div>
+            <div class="latest-widget" data-v-post>
+              <div class="latest-widget-thum">
+                <a href="single-blog.html">
+                  <img src="images/blog/blog-thum-8.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+                </a>
+                <div class="icon">
+                  <a href="single-blog.html">
+                    <img src="images/blog/icon.svg" alt="icon" />
+                  </a>
+                </div>
+              </div>
+              <div class="latest-widget-content">
+                <div class="content-title">
+                  <a href="single-blog.html" data-v-post-url>
+                    <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                  </a>
+                </div>
+                <div class="content-meta">
+                  <ul>
+                    <li>
+                      <i class="fa fa-clock-o"></i>
+                      October 19, 2020 - 2 min
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="latest-widget" data-v-post>
+              <div class="latest-widget-thum">
+                <a href="single-blog.html">
+                  <img src="images/blog/blog-thum-9.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+                </a>
+                <div class="icon">
+                  <a href="single-blog.html">
+                    <img src="images/blog/icon.svg" alt="icon" />
+                  </a>
+                </div>
+              </div>
+              <div class="latest-widget-content">
+                <div class="content-title">
+                  <a href="single-blog.html" data-v-post-url>
+                    <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                  </a>
+                </div>
+                <div class="content-meta">
+                  <ul>
+                    <li>
+                      <i class="fa fa-clock-o"></i>
+                      October 19, 2020 - 2 min
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="latest-widget" data-v-post>
+              <div class="latest-widget-thum">
+                <a href="single-blog.html">
+                  <img src="images/blog/blog-thum-10.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+                </a>
+                <div class="icon">
+                  <a href="single-blog.html">
+                    <img src="images/blog/icon.svg" alt="icon" />
+                  </a>
+                </div>
+              </div>
+              <div class="latest-widget-content">
+                <div class="content-title">
+                  <a href="single-blog.html" data-v-post-url>
+                    <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                  </a>
+                </div>
+                <div class="content-meta">
+                  <ul>
+                    <li>
+                      <i class="fa fa-clock-o"></i>
+                      October 19, 2020 - 2 min
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="latest-widget" data-v-post>
+              <div class="latest-widget-thum">
+                <a href="single-blog.html">
+                  <img src="images/blog/blog-thum-11.png" alt="blog-thum" loading="lazy" data-v-post-image data-v-if="post.image" />
+                </a>
+                <div class="icon">
+                  <a href="single-blog.html">
+                    <img src="images/blog/icon.svg" alt="icon" />
+                  </a>
+                </div>
+              </div>
+              <div class="latest-widget-content">
+                <div class="content-title">
+                  <a href="single-blog.html" data-v-post-url>
+                    <span data-v-post-name>Five Things You Need to Know to Start Your Day</span>
+                  </a>
+                </div>
+                <div class="content-meta">
+                  <ul>
+                    <li>
+                      <i class="fa fa-clock-o"></i>
+                      October 19, 2020 - 2 min
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="instagram">
+    <a href="#">
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <span>@Mary_Astor</span>
+    </a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="instagram-item">
+
+            <div class="instagram-item-thum">
+              <img src="images/blog/case-studies-1.png" alt="image">
+            </div>
+            <div class="instagram-item-thum">
+              <img src="images/blog/case-studies-2.png" alt="image">
+            </div>
+            <div class="instagram-item-thum">
+              <img src="images/blog/case-studies-3.png" alt="image">
+            </div>
+            <div class="instagram-item-thum">
+              <img src="images/blog/case-studies-4.png" alt="image">
+            </div>
+            <div class="instagram-item-thum">
+              <img src="images/blog/case-studies-5.png" alt="image">
+            </div>
+            <div class="instagram-item-thum">
+              <img src="images/blog/case-studies-6.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 mx-auto text-center">
+          <div class="footer-logo">
+            <img src="images/logo.svg" alt="logo" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <div class="footer-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <div class="sociale-icon">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="copy-right">
+            <p>© Copyright <span id="copyrightYear"></span> - All Rights Reserved by <a href="https://staticmania.com/" target="_blank">StaticMania</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0&libraries=geometry">
+</script>
+  <!-- Vendor JS -->
+  <script src="vendor/jQuery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="vendor/slick/slick.min.js"></script>
+  <script src="vendor/g-map/gmap.js"></script>
+  <!-- Main JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,11 +1,65 @@
 # Blogge
-Blogge HTML Theme Development Structure
+
+<img src="https://user-images.githubusercontent.com/16266381/106882813-64e49280-6709-11eb-83a7-144575c12aec.jpg" alt="screenshot" width="100%">
+
+## [Vvveb CMS](https://www.vvveb.com) theme.
+
+👉🏻 [Theme page](https://themes.vvveb.com/product/blogge) 
+👉🏻 [Theme development documentation](http://dev.vvveb.com/theme-introduction)
+
+Use this template either as a standalone Bootstrap 5 template or as a Vvveb CMS theme.
+
+Blogge is a clean and minimal blog theme suitable for someone with easy creative features and effects who wants to create a personal blog site to make readers enjoy the pleasure of reading blog posts and blogs.
+
+## Features
+
+- Responsive Ready.
+- Powered by Bootstrap 5.
+- Blog Template.
+- Well formatted code.
+- Easy Customization.
+- Google Analytics.
+- Crafted for Personal Blogging
+- Fully functional Blog theme
+
+## Build
+
+### Generate html files
+
+```bash
+npm run gulp
+```
+
+### Watch for changes for development
+
+```bash
+npm run gulp watch
+```
+
+### Generate sections list for VvvebJs page builder
+
+```bash
+npm run gulp sections
+```
+
+### Generate screenshots for sections
+
+```bash
+npm run gulp screenshots
+```
 
 
-** Recommended modules and Installation process ** 
-1. We need **Node modules** to run the project. To install **Node Modules** visit the following links and follow the steps. [Install Node](https://nodejs.org/en/)
-2. Then We need to install **Yarn**. Please click [here](https://yarnpkg.com/getting-started/install) to install Yarn.
-3. After downloading the project run **yarn** to install the modules.
-4. After successfully installed all require modules, run **yarn dev** to run the project. this will create a dist folder, where all the developed file will remain.
-5. To built the final project, run **yarn build** command.
-6. For more details, read the full documenation [here](https://documentation.staticmania.com/docs/blogge/).
+## Quick start
+
+- Clone the repo and run it.
+```bash
+git clone https://github.com/Vvveb/blogge/
+cd blogge
+npm i
+npm run gulp
+```
+
+
+## Licensing
+
+This Repository is licensed under the [MIT](https://github.com/Vvveb/blogge/blob/master/LICENSE) License

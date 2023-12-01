@@ -1,4 +1,4 @@
-<section class="blog-single">
+<section class="blog-single" data-v-component-post="post" data-v-tags="5" data-v-categories="3">
   <div class="container">
     <div class="row">
       <div class="col-lg-2 order-2 order-lg-1">
@@ -16,18 +16,28 @@
       </div>
       <div class="col-lg-10 order-1 order-lg-2">
         <article class="single-blog">
-          <a href="#" class="tag">Travel</a>
-          <p class="title">Five Things You Need to Know
+			<div data-v-if="categories > 0" 
+					<ul class="list-inline">
+						  <li class="list-inline-item" data-v-categories-cat>
+							<a href="category.html" class="tag" data-v-categories-cat-url>
+								<span data-v-categories-cat-name>Travel</span>
+							</a>
+						  </li>
+					</ul>
+				</div>          
+          
+          <p class="title" data-v-post-name>Five Things You Need to Know
             to Start Your Day</p>
           <ul class="meta">
-            <li>By <a href="about.html">Mary Astor</a></li>
+            <li>By <a href="#" data-v-post-author-url><span data-v-post-display_name>Mary Astor</span></a></li>
             <li>
               <i class="fa fa-clock-o"></i>
-              October 19, 2020 - 2 min
+              <span data-v-post-created_at data-filter-friendly_date>October 19, 2020 - 2 min</span>
             </li>
           </ul>
-          <img src="images/blog/blog-single.png" alt="banner">
+          <img src="images/blog/blog-single.png" class="featured-media" alt="banner" loading="lazy" data-v-post-image data-v-if="post.image">
 
+		<div class="post-content" data-v-post-content>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
             et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores ea rebum. Stet
             clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
@@ -85,6 +95,7 @@
             sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea
             takimata sanctus est Lorem ipsum dolor sit amet.
           </p>
+        </div>
         </article>
         <div class="blog-single-presentation">
           <ul>
