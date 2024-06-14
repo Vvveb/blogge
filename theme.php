@@ -24,7 +24,7 @@
 Name: Blogge
 Slug: blogge
 URI: https://vvveb.com/
-Author: Vvveb
+Author: StaticMania & Vvveb
 Author URI: https://vvveb.com
 Description:  Personal blog template. Design is clean and professionally crafted. It is simple, elegant and easy to modify.
 Version: 1.0
